@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+
+/* ---------モバイル------------- */
+
+/* ~~~~~~~~*common*~~~~~~~~~~~~ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    Arial,
+    Meiryo,
+    "Helvetica Neue",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    sans-serif;
+}
+
+/* -----header----- */
+
+header {
+  background-color: #007bff;
+  width: 100%;
+  height: 110px;
+  color: white;
+  padding: 20px 0;
+}
+
+header h1 {
+  text-align: center;
+}
+
+ul {
+  width: 280px;
+  margin: 0 auto;
+  display: flex;
+  gap: 24px;
+}
+
+li {
+  list-style: none;
+}
+
+/* -----main----- */
+.main-container {
+  position: relative;
+}
+
+.main-container img {
+  width: 100%;
+  height: 500px;
+}
+
+.main-wrapper {
+  background-color:rgba(43, 136, 230, 0.7);
+  border-radius: 20px;
+  padding: 50px 20px;
+  position: absolute;
+  top: 90px;
+  left: 200px;
+}
+
+.main-container h1 {
+  font-size: 25px;
+  margin: 0 auto;
+}
+
+.main-container span {
+  color: yellow;
+}
+
+
+/* -----food------- */
+.food-container {
+  padding-bottom: 10px;
+}
+
+.food-wrapper {
+  margin: 0 auto;
+  max-width: 80%;
+  padding-top: 30px;
+}
+
+
+.food-container img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.food-container img:hover {
+  transform: scale(1.2);
+}
+
+.food-container h2 {
+  margin: 40px 0;
+}
+
+.food-container p {
+  margin: 25px 0;
+}
+
+button {
+  all: unset;
+  background-color: #4897d9;
+  width: 150px;
+  height: 42px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.price {
+  color: silver;
+}
+
+.correction {
+  text-decoration: line-through;
+}
+
+.red {
+  font-size: 24px;
+  color: red;
+}
+
+
+/* ----------タブレット----------- */
+@media (min-width:480px) {
+  .main-wrapper {
+    max-width: 380px;
+  }
+}
+
+
+
+/* 
+----------PC-------------------- */
+@media (min-width:773px) {
+
+  /* ---main---- */
+  .main-container img {
+    width: 100%;
+    height: 700px;
+  }
+
+  .main-wrapper {
+    max-width: 1410px;
+    padding: 15px 20px;
+    position: absolute;
+    top:160px;
+    left:690px;
+  }
+
+  .main-container h1 {
+    font-size: 50px;
+    margin: 0 auto;
+  }
+
+
+  /* -----food------ */
+  .food-wrapper {
+    max-width: 45%;
+  }
+
+  .food-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
